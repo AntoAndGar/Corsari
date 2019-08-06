@@ -1,0 +1,71 @@
+
+        .is-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        };
+
+        /* @media screen and (min-width: 1024px) {
+        .hero-container.has-overlay-image .hero .image {
+        position: absolute;
+        width: 500px;
+        margin: 0 auto;
+        } } */
+
+        .white-cloud {
+            position: absolute;
+            width: 100%;
+            min-height: 30px;
+            margin-top: -20px;
+            user-select: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .white-cloud img {
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none; 
+        }
+
+        @media only screen and (min-width: 300px) {
+            .white-cloud {
+            margin-top: -15px;
+            margin-left: -10px;
+            margin-right: -10px; } }
+        @media only screen and (min-width: 380px) {
+            .white-cloud {
+            margin-top: -25px;
+            margin-left: -10px;
+            margin-right: -10px; } }
+        @media only screen and (min-width: 550px) {
+                .white-cloud {
+                margin-top: -35px;
+                margin-left: -10px;
+                margin-right: -10px; } }
+        @media only screen and (min-width: 768px) {
+            .white-cloud {
+            margin-top: -45px;
+            margin-left: -10px;
+            margin-right: -10px; } }
+        @media only screen and (min-width: 960px) {
+            .white-cloud {
+            margin-top: -60px;
+            margin-left: -20px;
+            margin-right: -20px; } }
+        @media only screen and (min-width: 1320px) {
+            .white-cloud {
+            margin-top: -75px;
+            margin-left: -30px;
+            margin-right: -30px; } }
+        @media only screen and (min-width: 1920px) {
+            .white-cloud {
+            margin-top: -100px;
+            margin-left: -30px;
+            margin-right: -30px; } }
+
+        .navbar-link:not(.is-arrowless)::after {
+            border-color: #ffffff;
+        }
