@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Corsari Neri</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="styles/debug.css"> -->
     <!-- <link rel="stylesheet" href="styles/helpers.css"> -->
     <link rel="stylesheet" href="styles\corsari.css">
@@ -144,7 +145,7 @@
                         </div>
                     </div>
                     <div class="columns">
-                            <div class="column">
+                            <div class="column" data-aos="fade-left" data-aos-duration="1000" data-aos-ease="ease-in-out" data-aos-delay="300">
                                 <span class="icon is-large">
                                     <img src=".\icons\map.svg">
                                 </span>
@@ -153,7 +154,7 @@
                                 <h5 class="title is-5 is-spaced">Preparazione</h5>
                                 <p class="subtitle is-6">Un anno intero di allenamenti ed eventi per rafforzare anima e corpo e dare il meglio di se nei due giorni in cui si decide il tutto per tutto.</p>
                             </div>
-                            <div class="column">
+                            <div class="column"  data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease-in-out" data-aos-delay="300">
                                 <span class="icon is-large">
                                     <img src=".\icons\message-in-a-bottle.svg">
                                 </span>
@@ -162,7 +163,7 @@
                                 <h5 class="title is-5 is-spaced">Indizi</h5>
                                 <p class="subtitle is-6">Sempre agguerriti per fronteggiare i temibili indizi del comitato che non lascia mai tregua alla nostra fantasia.</p>
                             </div>
-                            <div class="column">
+                            <div class="column" data-aos="fade-right" data-aos-duration="1000" data-aos-ease="ease-in-out" data-aos-delay="300">
                                 <span class="icon is-large">
                                         <img src=".\icons\chest.svg">
                                 </span>
@@ -417,6 +418,9 @@
             e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
             })();
         </script>
-
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
 </html>
