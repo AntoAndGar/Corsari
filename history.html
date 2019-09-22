@@ -9,8 +9,14 @@
         <!-- <link rel="stylesheet" href="styles/helpers.css"> -->
         <link rel="stylesheet" href="styles\corsari.css">
         <script src="https://kit.fontawesome.com/9b81081afd.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
         <script defer src=".\navbarBurger.js"></script>
+        <script type="text/javascript" src="./TweenMax.min.js"></script>
+        <script type="text/javascript" src="./ScrollMagic.js"></script>
+        <script type="text/javascript" src="./animation.gsap.js"></script>
+        <script type="text/javascript" src="./debug.addIndicators.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
         <style type="text/css">
 
         </style>
@@ -47,6 +53,9 @@
         
                                             <a class="navbar-item has-text-white" href=".\sponsor.html">
                                                 Sponsor
+                                            </a>
+                                            <a class="navbar-item has-text-white" href=".\events.html">
+                                            Eventi
                                             </a>
                                         
                                                 <!-- <div class="navbar-item has-dropdown is-hoverable">
@@ -93,21 +102,101 @@
                                                 </a> -->
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
-                                        </nav>
+                                    </div>
+                                </nav>
+                         </div>
 
                                     <div class="hero-body">
-                                        <div class="container is-small has-text-centered">
-                                                <div class="column is-half is-offset-one-quarter">
-                                                    <h1 class="title is-spaced">Coming Soon...</h1>
+                                            <div class="container is-small">
+                                                    <section>
+                                                            <!-- <div class="columns">
+                                                                    <div class="column is-half is-offset-one-quarter has-text-centered">
+                                                                        <p id="storyp"> </p>
+                                                                    </div>
+                                                                </div> -->
+                                                        <div class="columns">
+                                                            <div class="column is-half is-offset-one-quarter has-text-centered">
+                                                                <h1 class="title is-1 is-spaced">La nostra Storia</h1>
+                                                            </div>
+                                                        </div>
+                                                        <div class="columns is-spaced">
+                                                            <div class="column is-5 is-centered">
+                                                                <div class="spacer s2" ></div>
+                                                                <div id="target">
+                                                                    <figure class="image is-128x128">
+                                                                            <img id="ship" src="./icons/pirate-ship.svg">
+                                                                    </figure>
+                                                                </div>       
+                                                            </div>
+                                                            <div class="column is-6">
+                                                                <h3 class="title is-4 is-spaced">I nostri Alleati</h3>
+                                                                <p class="subtitle is-5 is-size-6-mobile">
+                                                                        Percorri con noi questa traversata attraverso la nostra storia.
+                                                                </p>
+                                                            </div>
+                                                            <!-- <button class="button" id="showModal">Leggi</button> -->
+                                                        </div>
+                                                    </section>
+                                                    <section id="storia">
+                                                            <div class="columns is-mobile">
+                                                                    <div class="column is-two-third is-centered">
+                                                                            <!-- <h1 class="title is-1 is-spaced">Corsari Neri</h1> -->
+                                                                            <figure class="image1">
+                                                                                <img style="filter: invert(100%);" src=".\icons\scritta.svg">
+                                                                            </figure>
+                                                                                <div>
+                                                                                    <figure  class="image is-64x64">
+                                                                                        <img src=".\Corsari\logo2018 (1).png">
+                                                                                    </figure>
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="columns is is-mobile">
+                                                                        <div class="column is-two-third is-offset-two-third">
+                                                                                <p id="storyp"></p>
+                                                                                <!-- <p>"Una voce robusta, che aveva una specie di vibrazione metallica, s’alzò dal mare ed echeggiò fra le tenebre, lanciando queste parole minacciose:[..]
+                                                                                <br> — Tu sai chi è il Corsaro Nero?
+                                                                                <br>— Lampi e folgori! È il filibustiere piú audace della Tortue."
+                                                                                <h2 class="subtitle">Emilio Salgari, Il Corsaro Nero (1898)</h2>
+                                                                                </p> -->
+                                                                                <br>
+                                                                                <br>
+                                                                                <p> 
+                                                                                I Corsari Neri sono una squadra che prende parte alla storica Caccia al Tesoro di Sorrento, che si tiene nel territorio della penisola sorrentina a partire dalla mezzanotte del giorno di Natale da più di 30 anni,  e che coinvolge quasi un migliaio di  giocatori. 
+                                                                                Nascono nel gennaio del 2015, partoriti dalle menti folli e sognatrici di sette fondatori, uniti dalla passione per il gioco - che poi tanto gioco non è, altrimenti non si chiamerebbe Caccia. 
+                                                                                La follia risiede nell'idea dell'impresa: costruire da zero una squadra competitiva per un gioco che ormai presenta i connotati di una manifestazione sportiva agonistica.
+                                                                                </p>
+                                                                                <br>
+                                                                                
+                                                                                <p>        
+                                                                                Una spedizione audace 
+                                                                                Le difficoltà sono molteplici: il 2015 è l'anno in cui vengono gettati le basi della struttura della squadra: dalla scelta del logo  - teschio bardato da bendana trafitto nel cranio da parte a parte da una spada, che va ad infilzare in punta la mappa del tesoro riferimento alla cartina CAI dei Monti Lattari - e del motto - Sine Metu -  Senza Paura, perchè il "Cor - aggio" ovvero l'agire col cuore,  "fa sì che chi ne è dotato non si sbigottisca di fronte ai pericoli, affronti con serenità i rischi, non si abbatta per dolori fisici o morali e, più in generale, affronti a viso aperto la sofferenza, il pericolo, l'incertezza e l'intimidazione". Ed è in questa cornice che si incastona l'animo di un Corsaro, "cercatore del Tesoro".  
+                                                                                </p>
+                                                                        
+                                                                    </div>
+                                                            </div>
+                                                    </section>
+                                                    <!-- <section id="navigazione"></section> -->
+                                                    <!-- <div class="container" id="app">
+                                                    <div class="modal">
+                                                        <div class="modal-background"></div>
+                                                        <div class="modal-content">
+                                                          <p id="storyp"></p>
+                                                        </div>
+                                                        <button class="modal-close"></button>
+                                                      </div>
+                                                    </div> -->
                                                 </div>
+
+                           
                                         </div>
                                     </div>
                         </div>
                     </div>
                 
                 </section>
+                <!-- <section id="mappa" class="has-background-image"></section> -->
 
                 <footer id="footer" class="section has-background-black" style="padding-bottom: 1.5rem">
                         <div class="container is-small">
@@ -118,7 +207,7 @@
                                     <div class="content is-small has-text-grey">
                                         Corsari Neri
                                         <br>
-                                        <!-- <a class="has-text-white" href="mailto:info@corsarineri.com">Info@corsarineri.com</a> -->
+                                        <a class="has-text-white" href="mailto:squadra@corsarineri.it">squadra@corsarineri.it</a> 
                                     </div>
                                 </div>
                                     <div class="column">
@@ -195,5 +284,8 @@
                         </div>
             
                     </footer>
+                <script src="../history_animation.js"></script>
+                <script src="../config.js"></script>
+                <script src="../story-teller.js"></script>
     </body>
 </html>
