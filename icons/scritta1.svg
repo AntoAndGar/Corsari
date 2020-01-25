@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="575" height="100">
+    <defs>
+        <style>
+            @import url(<![CDATA['https://fonts.googleapis.com/css?family=Pirata+One&text=Corsari%20Neri']]>);
+        </style>
+    </defs>
+    <style><![CDATA[svg text{stroke:none}]]></style>
+    <text x="30" y="90" font-size="100" textLength="500" font-family="Pirata One">Corsari Neri</text>
+</svg>
