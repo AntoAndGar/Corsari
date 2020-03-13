@@ -133,6 +133,7 @@
                     </div>
 
                     <div class="hero-body">
+                        <canvas class="background" style="width: 100%; height: 100%;"></canvas>
                         <div class="container has-text-centered">
                             <div class="columns">
                                 <div class="column is-one-third is-offset-one-third">
@@ -342,5 +343,46 @@
         <script>
           AOS.init();
         </script>
+        <script>
+            window.onload = function() {
+                var particles = Particles.init({
+                    selector: '.background',
+                    color: ['#99ccff'],
+                    connectParticles: true,
+                    maxParticles: 250,
+                    speed: 0.5,
+                    minDistance: 100,
+                    responsive: [
+                        {
+                            breakpoint: 1500,
+                            options: {
+                                maxParticles: 200
+                            }
+                        }, {
+                            breakpoint: 1000,
+                            options: {
+                                maxParticles: 125
+                            }
+                        }, {
+                            breakpoint: 750,
+                            options: {
+                                maxParticles: 75
+                            }
+                        }, {
+                            breakpoint: 350,
+                            options: {
+                                maxParticles: 50
+                            }
+                        }, {
+                            breakpoint: 250,
+                            options: {
+                                maxParticles: 35
+                            }
+                        }
+                    ]
+                });
+            };
+        </script>
+        <script src="particles.min.js"></script>
     </body>
 </html>
